@@ -1,0 +1,21 @@
+.escritores {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.escritor {
+  width: 150px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.escritor .nombre {
+  text-align: center;
+}
+
+.escritor img {
+  width: 100%;
+}
