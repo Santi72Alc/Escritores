@@ -9,16 +9,19 @@ import { Escritor } from '../models/escritor.model';
 export class EscritoresService {
   constructor() {}
 
+  // BASIC Get All Escritores -- DON'T USE
   getAll(): Escritor[] {
     return ESCRITORES;
   }
 
+  // Get All Escritores
   getAllPromise(): Promise<Escritor[]> {
     return new Promise((resolve, reject) => {
       resolve(ESCRITORES);
     });
   }
 
+  // Get ALL Escritores by Pais
   getByPais(pPais: String): Promise<Escritor[]> {
     return new Promise((resolve, reject) => {
       const escritoresSelected: Escritor[] = ESCRITORES.filter((escritor) => {
@@ -28,6 +31,7 @@ export class EscritoresService {
     });
   }
 
+  // Get ONE Escritor by Id
   getById(pId: Number): Promise<Escritor> {
     return new Promise((resolve, reject) => {
       const escritorFound = ESCRITORES.find((escritor) => {
