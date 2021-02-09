@@ -10,18 +10,23 @@ import { EscritoresService } from 'src/app/services/escritores.service';
 })
 export class DetalleComponent implements OnInit {
   escritor: Escritor;
+  showLibros: Boolean;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private escritorSrv: EscritoresService
-  ) {}
+  ) {
+this.showLibros = false;
+  }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(async (params) => {
       const { escritorId } = params;
-      console.log(escritorId);
       this.escritor = await this.escritorSrv.getById(parseInt(escritorId));
-      console.log(this.escritor);
     });
+  }
+
+  onclick(): void {
+    this.showLibros = !this.showLibros;
   }
 }

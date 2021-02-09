@@ -1,7 +1,6 @@
-
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -11,6 +10,7 @@
   border: 1px solid black;
   padding: 10px;
   margin-top: 40px;
+  /* justify-content: center; */
 }
 
 .detalle .nombre {
@@ -18,4 +18,13 @@
 }
 .detalle img {
   width: 100%;
+}
+
+.boton button {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

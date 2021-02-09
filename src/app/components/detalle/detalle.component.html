@@ -4,6 +4,13 @@
     <img [src]="escritor?.imagen" alt="" />
     <p>{{ escritor?.pais }}</p>
   </div>
+  <div class="boton">
+
+    <button *ngIf="!showLibros" [routerLink]="['libros']" (click)= "onclick()">Libros editados</button>
+    <button *ngIf="showLibros" [routerLink]="['/escritores', escritor.id]" (click)= "onclick()">Cerrar libros</button>
+
+  </div>
+
 </div>
 
 <router-outlet></router-outlet>
