@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ListaEscritoresComponent } from './components/lista-escritores/lista-escritores.component';
 import { EscritoresService } from './services/escritores.service';
 import { DetalleComponent } from './components/detalle/detalle.component';
+import { ListaLibrosComponent } from './components/lista-libros/lista-libros.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaEscritoresComponent,
-    DetalleComponent
+    DetalleComponent,
+    ListaLibrosComponent
   ],
   imports: [
     BrowserModule,
